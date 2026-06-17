@@ -1,0 +1,9 @@
+name:pipeline
+on:[push]
+
+jobs:
+ bulid:
+ runs-on: windows-lastest
+ steps:
+ -users: action/checkout@v4
+ -run: python app.py

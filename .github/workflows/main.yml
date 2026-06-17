@@ -1,9 +1,11 @@
-name:pipeline
-on:[push]
+name: pipeline
+
+on:
+  push:
 
 jobs:
-  bulid:
-    runs-on: windows-lastest
-   steps:
-     - uses: actions/checkout@v4
-     - run: python app.py
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python app.py
